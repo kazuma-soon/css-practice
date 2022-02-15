@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+
+
 /* -- 背景画像 -- */
 .big-bg {
   background-size: cover;
@@ -26,6 +28,7 @@ body {
   font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体', 'ヒラギノ角ゴ Pro W3', sans-serif;
   line-height: 1.7;
   color: #432;
+  background-color: darkgray;
 }
 
 a {
@@ -270,9 +273,96 @@ aside p {
   object-fit: cover;
 }
 
+/* -- CONTACT */
+#contact {
+  background-image: url('../images/contact-bg.jpg');
+  min-height: 100vh; 
+}
+
+/* -- フォーム -- */
+form div {
+  margin-bottom: 14px;
+}
+
+label {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px #fff solid;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  max-width: 240px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 480px;
+  height: 6rem;
+}
+
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* -- 店情報・地図 -- */
+#location {
+  padding: 4% 0;
+}
+
+#location .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.location-info {
+  padding: 12px 10px;
+}
+
+.location-map {
+  width: 74%;
+}
+
+iframe {
+  width: 100%;
+}
+
+/* -- SNS -- */
+#sns {
+  background: #faf7f0;
+  padding: 4% 0;
+}
+
+#sns .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+#sns .subtitle {
+  margin-bottom: 30px;
+}
+
+#sns .sns-box {
+  width: 30%;
+}
 
 
 
+
+/* ---------------------------------------------------------*/
 
 @media (max-width: 600px) {
   .page-header {
@@ -356,6 +446,34 @@ aside p {
 
   .big-box img {
     height: 100%;
+  }
+
+  /* -- CONTACT -- */
+  #contact .page-title {
+    margin-top: 40px;
+  }
+
+  /* -- フォーム -- */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    max-width: 100%;
+  }
+
+  /* -- SNS -- */
+  #location .wrapper,
+  #sns .wrapper {
+    flex-direction: column;
+  }
+
+  .location-info,
+  .location-map,
+  #sns .sns-box {
+    width: 100%;
+  }
+
+  #sns .sns-box {
+    margin-bottom: 30px;
   }
 }
 
